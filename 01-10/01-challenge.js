@@ -25,7 +25,7 @@ function sumStr(a,b) {
 module.exports = sumStr;
 
 /** Test Cases **/
-// mvodde to jest test
+// moved to jest test
 // console.log( sumStr("4","5") ); // should return "9"
 // console.log( sumStr("34","5") ); // should return "39"
 // console.log( sumStr("4.5", "5") ); // should return "9.5"
