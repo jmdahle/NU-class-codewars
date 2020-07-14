@@ -29,7 +29,7 @@ const dateFormatter = (uts, loc) => {
     let year = date.getFullYear().toString();
     let day = date.getDate().toString()
     let dateFormat = formats[loc];
-    let formattedDate = dateFormat.replace(/[y]{4}/,year).replace(/[y]{2}/,year.slice(-2)).replace(/[m][m]/,("0"+month).slice(-2)).replace(/[m]{1}/,month).replace(/[d][d]/,("0"+day).slice(-2)).replace(/[d]{1}/,day);
+    let formattedDate = dateFormat.replace(/[y]{4}/,year).replace(/[y]{2}/,year.slice(-2)).replace(/[m]{2}/,("0"+month).slice(-2)).replace(/[m]{1}/,month).replace(/[d][d]/,("0"+day).slice(-2)).replace(/[d]{1}/,day);
     return formattedDate;
 }
 
