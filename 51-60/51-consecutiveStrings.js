@@ -20,6 +20,7 @@ const consecutiveStrings = (strarr, k) => {
     if (strarr.length === 0 || k > strarr.length || k <= 0) return '';
     return strarr.slice(0,strarr.length - (k-1)).map( (item, index) => item + strarr.slice(index+1,index+k).join('')).reduce( (endval, currval) => currval.length > endval.length ? currval : endval);
 }
+
 // Export
 module.exports = consecutiveStrings;
 
