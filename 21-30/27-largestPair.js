@@ -15,7 +15,7 @@ Input sequence contains minimum two elements and every element is an integer.
 
 // Function
 const largestPairSum = (arr) => {
-    // sort the array, then take first(largest) two members
+    // sort the array, then take first(largest) two members and sum them
     return arr.sort( (a,b) => { return b-a }).slice(0,2).reduce( (sum, item) => { return sum + item });
 }
 // Export
