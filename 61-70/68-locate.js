@@ -16,8 +16,10 @@ locate(['a','b',['c','d',['e']]],'f'); // should return false
 // Function
 const locate = (arr,searchItem) => {
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i].length > 0) {
-            locate(arr[i])
+        if (Array.isArray(arr[i])) {
+            if (locate(arr[i], searchItem)) {
+                return true;
+            }
         } else {
             if (arr[i] === searchItem) {
                 return true;
@@ -27,10 +29,11 @@ const locate = (arr,searchItem) => {
     return false;
 }
 
+
 // Export
 module.exports = locate;
 
 // Log test
-console.log ( locate(['a','b',['c','d',['e']]]),'a');
-console.log ( locate(['a','b',['c','d',['e']]]),'e');
-console.log ( locate(['a','b',['c','d',['e']]]),'f');
+console.log ( locate(['a','b',['c','d',['e']]],'a'));
+console.log ( locate(['a','b',['c','d',['e']]],'c'));
+console.log ( locate(['a','b',['c','d',['e']]],'f'));
