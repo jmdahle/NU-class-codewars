@@ -1,0 +1,19 @@
+{
+  "name": "nu-class-codewars",
+  "version": "1.0.0",
+  "description": "solutions to codewars coding challenges",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmdahle/NU-class-codewars.git"
+  },
+  "author": "jmdahle",
+  "bugs": {
+    "url": "https://github.com/jmdahle/NU-class-codewars/issues"
+  },
+  "dependencies": {
+    "jest": "^26.4.2"
+  }
+}
