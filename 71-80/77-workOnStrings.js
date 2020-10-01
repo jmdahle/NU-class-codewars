@@ -55,7 +55,6 @@ const workOnStrings = (a,b) => {
             // if the letter occurs an odd # of times, the corresponding items in string switches cases
             let letter = Object.keys(freqCounter)[i];
             if ( freqCounter[letter]%2 !==0 ) {
-                // console.log(letter, stringToUpdate);
                 // change the case of each letter occurence in string
                 returnString = returnString.split("").map( item => item.toLowerCase() === letter ? switchCase(item) : item).join("");
             }
@@ -65,12 +64,8 @@ const workOnStrings = (a,b) => {
 
     let freqA = frequencyCount(a);
     let freqB = frequencyCount(b);
-    // console.log(freqA, freqB);
-
     let returnB = updateString(freqA, b);
-    // console.log(b, returnB);
     let returnA = updateString(freqB, a);
-    // console.log(a, returnA);
 
     return returnA + returnB;
 }
